@@ -56,7 +56,7 @@ body {
     color: #FAFAFA;
     text-decoration: none;
     &:hover {
-      color: salmon;
+      color: darksalmon;
     }
 
   @media screen and (min-width: 321px) {
@@ -74,6 +74,9 @@ body {
     padding-right: 2rem;
     color: #FAFAFA;
     text-decoration: none;
+    &:hover {
+      color:  darksalmon;
+    }
 
     @media screen and (min-width: 900px) {
       margin-left: 0px;
@@ -355,7 +358,7 @@ body {
   }
 }
 
-// footer --------------------------------
+// ---------------------------footer --------------------------------
 
 
 
@@ -364,14 +367,38 @@ body {
   padding-top: 2rem;
   padding-left: 1rem;
   padding-bottom: 2rem;
+  margin-top:40px;
+  
+  @media screen and (min-width: 900px) {
+    padding-left: 400px;
+  }
+
+  .footer-containerOne {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 321px) { 
+      flex-direction: row;
+      width: 100vw;
+    }
+
+  }
 
   &__header {
     color: #FAFAFA; 
 // MEDIA QUERY - TABLET 
   @media screen and (min-width: 321px) {
-  display: inline-block;
   margin-right: 48px;
+  width: 350px;
+  font-size: 60px;
   }
+  }
+
+  .social {
+    @media screen and (min-width: 321px) {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   &__social {
@@ -382,6 +409,18 @@ body {
       display: inline-block;
       margin-top: 25px;
   }
+  }
+
+  .footer-containerTwo {
+    @media screen and (min-width: 321px) {
+      width: 100vw;
+    }
+  }
+
+  .footer-contacts {
+    @media screen and (min-width: 321px) {
+    width: 224px;
+    }
   }
 
   &__nav-name {
@@ -428,8 +467,8 @@ body {
 
 @media screen and (min-width: 900px) {
   .footer {
-    width: 100%;
-    padding-left: 160px;
+    width: 100vw;
+    padding-left: 400px;
 
   }
 }
@@ -683,21 +722,27 @@ body {
     font-size: 60px;
     line-height: 68px;
   }
+  @media screen and (min-width: 900px) {
+    margin-left: 180px;
+  }
 }
 
 // ------------------ STUPID COMMENTS SECTION ----------------------
 
 .comments-section {
   margin-left: 16px;
-  margin-right: 16px;display: flex;
+  margin-right: 16px;
+  display: flex;
   flex-direction: row;
   @media screen and (min-width: 900px) {
-    width: 100%;
+    width: 528px;
+    margin-left: 360px;
   }
 }
 
 .frist-name__title {
   margin-left: 0px;
+  margin-bottom: 5px;
   color: #AFAFAF;
   @media screen and (min-width: 321px) {
     margin-left: 0px;
@@ -722,11 +767,13 @@ body {
 .comments-section__inputs {
   margin-left: 20px;
   @media screen and (min-width: 900px) {
-    width: 460px;
+    width: 528px;
+    flex-direction: column;
   }
 }
 
 .firstName {
+  margin-bottom: 15px;
   height: 40px;
   width: 200px; 
   border: solid black 2px;
@@ -738,12 +785,13 @@ body {
   }
   @media screen and (min-width: 900px) {
     width: 460px;
-    margin-left: 10rem;
+    margin-left: 0rem;
   }
 }
 
 .comments-title__header {
   margin-left: 0px;
+  margin-bottom: 5px;
   color: #AFAFAF;
   @media screen and (min-width: 321px) {
     margin-left: 0px;
@@ -752,7 +800,7 @@ body {
     margin-top: 15px
   }
   @media screen and (min-width: 900px) {
-    margin-left: 31rem;
+    margin-left:0px;
   }
 }
 
@@ -769,7 +817,7 @@ body {
   }
   @media screen and (min-width: 900px) {
     width: 460px;
-    margin-left: 31rem;
+    margin-left: 0rem;
   }
 }
 
@@ -777,6 +825,7 @@ body {
 // ----------Button ---------------
 
 .comments-submit {
+  margin-top: 10px;
   width: 210px;
   height: 40px;
   color: #AFAFAF;
@@ -791,7 +840,7 @@ body {
   }
   @media screen and (min-width: 900px) {
     width: 160px;
-    margin-left: 50rem;
+    margin-left: 19rem;
     margin-top: 24px;
   }
 }
@@ -804,7 +853,6 @@ body {
   margin-right: 16px;
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-bottom: 40px;
   border-top: solid #E1E1E1 1px;
   border-bottom: solid #E1E1E1 1px;
   display: flex;
@@ -814,7 +862,15 @@ body {
     margin-right: 100px;
     margin-left: 100px;
   }
+  @media screen and (min-width: 900px) {
+    margin-left: 344px;
+  }
 }
+
+.usrImg {
+  padding-left: 10px;
+  padding-top: 24px;
+} 
 
 .user-comment__image {
   width: 40px;
@@ -835,7 +891,7 @@ body {
 .user-comment__info-holder {
   display: flex;
   flex-direction: row;
-  margin-bottom: 24px;
+  margin-left: 0px;
 }
 
 .user-comment__name {
@@ -844,6 +900,65 @@ body {
 }
 
 .user-comment__date {
+  width: 112px;
+  font-size: 14px;
+  color: #E1E1E1;
+}
+
+// ----------------------------    -----   OLD USER COMMENTS  -------   ------------------------------->
+
+.oldUser-comment__container {
+  width: 288px;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: solid #E1E1E1 1px;
+  border-bottom: solid #E1E1E1 1px;
+  display: flex;
+  flex-direction: row;
+  @media screen and (min-width: 321px) {
+    width: 550px;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  @media screen and (min-width: 900px) {
+    margin-left: 344px;
+  }
+}
+
+.olUsrImg {
+  padding-left: 10px;
+  padding-top: 24px;
+} 
+
+.oldUser-comment__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  margin-right: 24px;
+  @media screen and (min-width: 321px) {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+.oldUser-comment__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.oldUser-comment__info-holder {
+  display: flex;
+  flex-direction: row;
+}
+
+.oldUser-comment__name {
+  width: 112px;
+  font-size: 14px;
+}
+
+.oldUser-comment__date {
   width: 112px;
   font-size: 14px;
   color: #E1E1E1;
